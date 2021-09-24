@@ -1,5 +1,5 @@
 <h1>GREEKHACKING</h1>
-<p>This program is doing it all in ones. What that means? Look at the images below</p>
+<p>This program is doing it all at ones. What that means? Look at the images below</p>
 
 <h1>SCREENSHOT</h1>
 
