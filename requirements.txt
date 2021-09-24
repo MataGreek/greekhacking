@@ -1,0 +1,4 @@
+pyfiglet==0.8.post1
+colorama==0.4.4
+requests==2.26.0
+ip2geotools==0.1.6
