@@ -53,7 +53,6 @@ print("     6 ==> MD5 Cracker")
 print("")
 print("     0 ==> Exit.")
 print("")
-print("     77 ==> h")
 print("")
 
 
