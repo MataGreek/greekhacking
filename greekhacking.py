@@ -58,7 +58,7 @@ print(logo)
 print("#" * 100)
 print("                                 Author: MATA    |   https://www.greekhacking.gr/")
 print("#" * 100)
-print("hi")
+
 print("")
 print("     1 ==> Subdomain Finder")
 print("")
