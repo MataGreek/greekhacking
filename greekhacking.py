@@ -60,11 +60,15 @@ def check_updates():
             print("=" * 70)
             print("")
         else:
-                print("  [+] An update has been found!  ")
-                conn.request("GET", "/MataGreek/greekhacking/main/greekhacking.py")
-                newCode = conn.getresponse().read().strip().decode()
-                with open("./greekhacking.py") as greekscript:
-                    greekscript.write(newCode)
+                ask = input("  [+] An update has been found! Do you want to update? (Y/n):   ")
+                if ask == 'Yes' or 'yes' or 'YES' or 'Y' or 'y':
+                    conn.request("GET", "/MataGreek/greekhacking/main/greekhacking.py")
+                    newCode = conn.getresponse().read().strip().decode()
+                    with open("./greekhacking.py") as greekscript:
+                        greekscript.write(newCode)
+                else:
+                    print(Fore.RED + " [!] Your version is:", currentVersion + "You are not up to date!" + Fore.GREEN)
+                    pass
 
     except Exception as e:
             print(Fore.RED + "Unable to Check for Update, Error:", e + Fore.RESET)
