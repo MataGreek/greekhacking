@@ -126,7 +126,7 @@ def check_updates():
 
                 if ask == 'Yes' or 'yes' or 'YES' or 'Y' or 'y':
                     print(" [!]Updating... Please do not close your application.")
-                    time.sleep(4)
+                    time.sleep(10)
                     
 
                     try:
@@ -136,7 +136,7 @@ def check_updates():
 
                         newCode1 = conn.getresponse().read().strip().decode()
                         newCode = conn.getresponse().read().strip().decode()
-                        with open ('/core/version.txt', 'w+') as vers:
+                        with open ('./core/version.txt', 'w+') as vers:
                             currentvers = vers.read().strip()
                             if newCode1 != currentvers:
                                 vers.write(newCode1)
@@ -185,6 +185,7 @@ print("     1 ==> Subdomain Finder")
 
 print("")
 
+print("hey")
 
 print("     2 ==> Admin Login Finder")
 
