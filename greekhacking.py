@@ -96,6 +96,7 @@ def check_updates():
 
         print(Fore.GREEN + "")
 
+        os.chmod('./core/version.txt', 0o777)
         with open('./core/version.txt') as vf:
 
             currentVersion = vf.read().strip()
