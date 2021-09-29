@@ -186,7 +186,6 @@ print("     1 ==> Subdomain Finder")
 
 print("")
 
-print("hey")
 
 print("     2 ==> Admin Login Finder")
 
