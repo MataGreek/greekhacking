@@ -94,7 +94,7 @@ def check_updates():
 
         print(Fore.GREEN + "")
 
-        with open('./core/version.txt', 'w+') as vf:
+        with open('./core/version.txt') as vf:
 
             currentVersion = vf.read().strip()
 
@@ -127,14 +127,20 @@ def check_updates():
                 if ask == 'Yes' or 'yes' or 'YES' or 'Y' or 'y':
                     print(" [!]Updating... Please do not close your application.")
                     time.sleep(4)
-                    print(" [+] Updated!")
-                    time.sleep(1)
+                    
 
                     try:
 
                         conn.request("GET", "/MataGreek/greekhacking/main/greekhacking.py")
+                        conn.request("GET", "/MataGreek/greekhacking/main/core/version.txt")
 
+                        newCode1 = conn.getresponse().read().strip().decode()
                         newCode = conn.getresponse().read().strip().decode()
+                        with open ('/core/version.txt', 'w+') as vers:
+                            currentvers = vers.read().strip()
+                            if newCode1 != currentvers:
+                                vers.write(newCode1)
+                                
 
                         with open('greekhacking.py', 'w+') as gr:
 
@@ -143,6 +149,8 @@ def check_updates():
                             if newCode != currentgr:
 
                                 gr.write(newCode)
+                                print(" [+] Updated!")
+                                time.sleep(1)
 
                                 pass
 
