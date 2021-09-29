@@ -96,7 +96,7 @@ def check_updates():
 
         print(Fore.GREEN + "")
 
-        with open('./core/version.txt') as vf:
+        with open('./core/version.txt', 'w') as vf:
 
             currentVersion = vf.read().strip()
 
@@ -186,6 +186,7 @@ print("     1 ==> Subdomain Finder")
 
 print("")
 
+print("hey")
 
 print("     2 ==> Admin Login Finder")
 
