@@ -96,9 +96,10 @@ def check_updates():
 
         print(Fore.GREEN + "")
 
-        with open('./core/version.txt') as vf:
+        with open('./core/version.txt', 'w+') as vf:
 
             currentVersion = vf.read().strip()
+
 
             print("")
 
@@ -151,10 +152,12 @@ def check_updates():
                                 time.sleep(1)
 
                                 pass
+                            if repoVersion != currentVersion:
+                                vf.write(repoVersion)
 
                             else:
 
-                             print(Fore.RED + " [!] Your version is:", currentVersion + "You are not up to date!" + Fore.GREEN)
+                                print(Fore.RED + " [!] Your version is:", currentVersion + "You are not up to date!" + Fore.GREEN)
 
                     except KeyboardInterrupt:
 
