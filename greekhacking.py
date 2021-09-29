@@ -152,11 +152,11 @@ def check_updates():
                                 print(" [+] Updated!")
                                 time.sleep(1)
 
-                                
+                                pass
+                                quit()
                             if repoVersion != currentVersion:
                                 with open('./core/version.txt', 'w+') as pf:
                                         pf.write(repoVersion)
-                                        quit()
 
                             else:
 
