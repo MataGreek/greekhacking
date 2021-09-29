@@ -2,7 +2,7 @@
 #################################################
 #####       GREEK HACKING FORUM             #####
 #####            Copyright                  ##### 
-#####     Greek Hacking ©2021 Forum         #####                       
+#####     Greek Hacking @2021 Forum         #####                       
 ##### Please use it for ethical purposes    #####
 #################################################
 #################################################
@@ -87,6 +87,7 @@ check_updates()
 print("")
 print("     1 ==> Subdomain Finder")
 print("")
+print("hey")
 print("     2 ==> Admin Login Finder")
 print("")
 print("     3 ==> Port Scanner")
