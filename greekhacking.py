@@ -2,7 +2,7 @@
 #################################################
 #####       GREEK HACKING FORUM             #####
 #####            Copyright                  ##### 
-#####     Greek Hacking @2021 Forum         #####                       
+#####     Greek Hacking ©2021 Forum         #####                       
 ##### Please use it for ethical purposes    #####
 #################################################
 #################################################
@@ -62,16 +62,23 @@ def check_updates():
         else:
                 ask = input("  [+] An update has been found! Do you want to update? (Y/n):   ")
                 if ask == 'Yes' or 'yes' or 'YES' or 'Y' or 'y':
-                    conn.request("GET", "/MataGreek/greekhacking/main/greekhacking.py")
-                    newCode = conn.getresponse().read().strip().decode()
-                    with open("./greekhacking.py") as greekscript:
-                        greekscript.write(newCode)
-                else:
-                    print(Fore.RED + " [!] Your version is:", currentVersion + "You are not up to date!" + Fore.GREEN)
-                    pass
+                    try:
+                        conn.request("GET", "/MataGreek/greekhacking/main/greekhacking.py")
+                        newCode = conn.getresponse().read().strip().decode()
+                        os.chmod('greekhacking.py', 0o777)
+                        with open('greekhacking.py', 'w') as gr:
+                            currentgr = gr.read().strip()
+                            if newCode != currentgr:
+                                gr.write(newCode)
+                                pass
+                            else:
+                             print(Fore.RED + " [!] Your version is:", currentVersion + "You are not up to date!" + Fore.GREEN)
+                    except KeyboardInterrupt:
+                        print()
+
 
     except Exception as e:
-            print(Fore.RED + "Unable to Check for Update, Error:", e + Fore.RESET)
+            print(Fore.RED + "Unable to Check for Update, Error:", str(e) + Fore.RESET)
 check_updates()
 
 
@@ -80,7 +87,6 @@ check_updates()
 print("")
 print("     1 ==> Subdomain Finder")
 print("")
-print("hey")
 print("     2 ==> Admin Login Finder")
 print("")
 print("     3 ==> Port Scanner")
