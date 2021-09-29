@@ -100,6 +100,8 @@ def check_updates():
 
             currentVersion = vf.read().strip()
 
+            vf.write(repoVersion)
+
 
             print("")
 
