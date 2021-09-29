@@ -91,7 +91,7 @@ def check_updates():
         repoVersion = conn.getresponse().read().strip().decode()
         print("")
         print("=" * 70)
-        print(Fore.LIGHTBLUE_EX + " [!] Latest Version:",repoVersion)
+        print(Fore.LIGHTBLUE_EX + " [!] Latest Version:",repoVersion + Fore.GREEN)
         print("=" * 70)
 
         print(Fore.GREEN + "")
