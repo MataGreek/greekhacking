@@ -125,21 +125,17 @@ def check_updates():
                 ask = input("  [+] An update has been found! Do you want to update? (Y/n):   ")
 
                 if ask == 'Yes' or 'yes' or 'YES' or 'Y' or 'y':
-                    print(" [!]Updating... Please do not close your application.")
-                    time.sleep(10)
+                    print("")
+                    print("  [!] Updating... Please do not close your application.")
+                    print("")
+                    time.sleep(4)
                     
 
                     try:
 
                         conn.request("GET", "/MataGreek/greekhacking/main/greekhacking.py")
-                        conn.request("GET", "/MataGreek/greekhacking/main/core/version.txt")
 
-                        newCode1 = conn.getresponse().read().strip().decode()
                         newCode = conn.getresponse().read().strip().decode()
-                        with open ('./core/version.txt', 'w+') as vers:
-                            currentvers = vers.read().strip()
-                            if newCode1 != currentvers:
-                                vers.write(newCode1)
                                 
 
                         with open('greekhacking.py', 'w+') as gr:
