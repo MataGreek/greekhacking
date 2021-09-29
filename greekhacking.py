@@ -152,10 +152,11 @@ def check_updates():
                                 print(" [+] Updated!")
                                 time.sleep(1)
 
-                                pass
+                                
                             if repoVersion != currentVersion:
                                 with open('./core/version.txt', 'w+') as pf:
                                         pf.write(repoVersion)
+                                        quit()
 
                             else:
 
@@ -196,7 +197,6 @@ print("")
 print("     3 ==> Port Scanner")
 
 print("")
-print("hey")
 
 print("     4 ==> Password Generator")
 
