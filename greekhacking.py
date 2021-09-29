@@ -41,23 +41,18 @@ print("#" * 100)
 
 def check_updates():
     try:
-        requests.get('https://raw.githubusercontent.com/MataGreek/greekhacking/main/core/version.txt')
-        os.write("  [~] Checking for updates...\n")
         conn = httplib.HTTPSConnection("raw.githubusercontent.com")
         conn.request("GET", "/MataGreek/greekhacking/main/core/version.txt")
         repoVersion = conn.getresponse().read().strip().decode()
-        with open(versionpath) as vf:
+        print("Latest Version:",repoVersion)
+        print("")
+        with open('./core/version.txt') as vf:
             currentVersion = vf.read().strip()
-        if repoVersion == currentVersion:os.write("  [*] The script is up to date!\n")
+            print("Your Version:",currentVersion)
+        if repoVersion == currentVersion:
+            print(" [*] The script is up to date!")
         else:
-                print("  [+] An update has been found ::: Updating... ")
-                conn.request("GET", "/MataGreek/greekhacking/main/greekhacking.py")
-                newCode = conn.getresponse().read().strip().decode()
-                with open("greekhacking.py", "w") as  greekscript:
-                   greekscript.write(newCode)
-                with open(versionpath, "w") as ver:
-                     ver.write(repoVersion)
-                os.write("  [+] Successfully updated :)\n")
+                print("  [+] An update has been found!  ")
 
     except Exception:
             print("Unable to Check for Update, Error:")
@@ -82,7 +77,7 @@ print("     0 ==> Exit.")
 print("")
 print("")
 
-
+check_updates()
 
 
 
