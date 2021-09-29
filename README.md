@@ -51,7 +51,7 @@
 
 <h1>INSTALLATION</h1>
 <p>cd greekhacking</p>
-<p>pip install -r requirements.txt</p>
+<p>python setup.py</p>
 <p>python greekhacking.py</p>
 
 <h1>USAGE</h1>
