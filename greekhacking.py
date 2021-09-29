@@ -96,7 +96,7 @@ def check_updates():
 
         print(Fore.GREEN + "")
 
-        with open('./core/version.txt', 'w+') as vf:
+        with open('./core/version.txt') as vf:
 
             currentVersion = vf.read().strip()
 
