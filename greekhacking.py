@@ -89,8 +89,10 @@ def check_updates():
         conn.request("GET", "/MataGreek/greekhacking/main/core/version.txt")
 
         repoVersion = conn.getresponse().read().strip().decode()
-
+        print("")
+        print("=" * 70)
         print(Fore.LIGHTBLUE_EX + " [!] Latest Version:",repoVersion)
+        print("=" * 70)
 
         print(Fore.GREEN + "")
 
@@ -180,6 +182,8 @@ print("")
 print("     1 ==> Subdomain Finder")
 
 print("")
+
+print("hey")
 
 print("     2 ==> Admin Login Finder")
 
