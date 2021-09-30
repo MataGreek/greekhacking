@@ -149,7 +149,8 @@ def check_updates():
                             if newCode != currentgr:
 
                                 gr.write(newCode)
-                                print(" [+] Updated!")
+                                print("")
+                                print("  [+] Updated!")
                                 time.sleep(1)
                                 print(Fore.RED + " [!] PLEASE REOPEN THE PROGRAM!" + Fore.GREEN)
 
