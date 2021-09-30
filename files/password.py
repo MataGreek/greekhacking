@@ -63,6 +63,7 @@ amount = 1
 for x in range(amount):
     password = "".join(random.sample(all,length))
     print(Fore.LIGHTWHITE_EX +"                         Your Password is: " + Fore.GREEN + password)
+    print("hey")
     print("")
     print("")
     print("")
