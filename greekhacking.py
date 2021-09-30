@@ -151,9 +151,10 @@ def check_updates():
                                 gr.write(newCode)
                                 print(" [+] Updated!")
                                 time.sleep(1)
+                                print(Fore.RED + " [!] PLEASE REOPEN THE PROGRAM!" + Fore.GREEN)
 
                                 pass
-                                quit()
+                                
                             if repoVersion != currentVersion:
                                 with open('./core/version.txt', 'w+') as pf:
                                         pf.write(repoVersion)
@@ -193,7 +194,6 @@ print("")
 print("     2 ==> Admin Login Finder")
 
 print("")
-print("hey")
 
 print("     3 ==> Port Scanner")
 
