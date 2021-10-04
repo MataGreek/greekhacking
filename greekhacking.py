@@ -187,32 +187,32 @@ check_updates()
 
 print("")
 
-print("     1 ==> Subdomain Finder")
+print("     [1] Subdomain Finder")
 
 print("")
 
 
-print("     2 ==> Admin Login Finder")
+print("     [2] Admin Login Finder")
 
 print("")
 
-print("     3 ==> Port Scanner")
+print("     [3] Port Scanner")
 
 print("")
 
-print("     4 ==> Password Generator")
+print("     [4] Password Generator")
 
 print("")
 
-print("     5 ==> Proxy List")
+print("     [5] Proxy List")
 
 print("")
 
-print("     6 ==> MD5 Cracker")
+print("     [6] MD5 Cracker")
 
 print("")
 
-print("     0 ==> Exit.")
+print("     [0] Exit.")
 
 print("")
 
