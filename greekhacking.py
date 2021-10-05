@@ -267,6 +267,9 @@ def check_updates():
                     print("")
 
                     time.sleep(4)
+                else:
+                    print(Fore.RED + "  Not able to open without the new update. For any problems please reinstall the program." + Fore.GREEN)
+                    
 
                     
 
@@ -283,10 +286,14 @@ def check_updates():
 
 
                         newCode = conn.getresponse().read().strip().decode()
+                        newCode1 = conn.getresponse().read().strip().decode()
                         
 
                                 
-                        
+                        with open('./files/password.py', 'w+') as ps:
+                            currentps = ps.read().strip()
+                            if newCode1 != currentps:
+                                ps.write(newCode1)
 
 
 
