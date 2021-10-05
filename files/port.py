@@ -67,7 +67,7 @@ try:
             with print_lock:
                 if r == 0:
                     print( Fore.RED + " [+]  " + Fore.WHITE + str(port) + Fore.WHITE + " ==> " + Fore.GREEN + " Open! " + Fore.RESET)
-                    s.close()
+                    
 
 except KeyboardInterrupt:
     print("")
