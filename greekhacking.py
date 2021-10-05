@@ -286,14 +286,9 @@ def check_updates():
 
 
                         newCode = conn.getresponse().read().strip().decode()
-                        newCode1 = conn.getresponse().read().strip().decode()
                         
 
-                                
-                        with open('/files/password.py', 'w+') as ps:
-                            currentps = ps.read().strip()
-                            if newCode1 != currentps:
-                                ps.write(newCode1)
+                
 
 
 
@@ -331,7 +326,13 @@ def check_updates():
                                 with open('./core/version.txt', 'w+') as pf:
 
                                         pf.write(repoVersion)
-
+                            
+                            newCode1 = conn.getresponse().read().strip().decode()
+                            currentpf = gr.read().strip()
+                            if newCode1 != currentpf: 
+                                with open('./files/password.py', 'w+') as ps:
+                                    pf.write(newCode1)
+                                    
 
 
                             else:
@@ -340,7 +341,7 @@ def check_updates():
 
                                 print(Fore.RED + " [!] Your version is:", currentVersion + "You are not up to date!" + Fore.GREEN)
 
-
+                            
 
                     except KeyboardInterrupt:
 
