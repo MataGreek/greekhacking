@@ -412,8 +412,6 @@ print("     [4] Password Generator")
 
 
 print("")
-print("hey")
-
 
 
 print("     [5] Proxy List")
