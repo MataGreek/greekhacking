@@ -170,11 +170,11 @@ def check_updates():
 
 
 
-        conn = httplib.HTTPSConnection("raw.githubusercontent.com")
+        conn = httplib.HTTPSConnection("github.com")
 
 
 
-        conn.request("GET", "/MataGreek/greekhacking/main/core/version.txt")
+        conn.request("GET", "/MataGreek/greekhacking/blob/main/core/version.txt")
 
 
 
@@ -277,8 +277,8 @@ def check_updates():
 
 
 
-                        conn.request("GET", "/MataGreek/greekhacking/main/greekhacking.py")
-                        conn.request("GET", "/MataGreek/greekhacking/main/files/password.py")
+                        conn.request("GET", "/MataGreek/greekhacking/blob/main/greekhacking.py")
+                        conn.request("GET", "/MataGreek/greekhacking/blob/main/files/password.py")
                         
                         
 
