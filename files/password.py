@@ -2,6 +2,7 @@ import random
 import time
 import pyfiglet
 from typing import Text
+import hashlib
 import colorama
 from colorama import *
 colorama.init()
@@ -66,4 +67,17 @@ for x in range(amount):
     print("")
     print("")
     print("")
-    quit()
+    print(Fore.WHITE + "")
+    ask = input("   Do you want to encrypt it? (Y/n):  " + Fore.GREEN)
+    if ask == 'y' or 'Y' or 'YES' or 'yes' or 'Yes':
+
+                result = hashlib.md5(password.encode())
+                print("")
+                print("")
+                print("")
+                print(Fore.GREEN + "                        Your hashed password is: " + Fore.RED, end="")
+                print(result.hexdigest())
+                print("")
+                print("")
+                print("")
+                quit()
