@@ -80,11 +80,11 @@ def port_check(ip,port):
 
     if result == 0:
         print(str(ip) + "               " + Fore.LIGHTBLUE_EX + str(port) + Fore.YELLOW + "                  " + str(response.country) + Fore.GREEN + "                          Open" + Fore.RESET)
-        
+        device_socket.close()
         time.sleep(0.5)
     else:
         print(str(ip) + "               " + Fore.LIGHTBLUE_EX + str(port) + Fore.YELLOW + "                  " + str(response.country) + Fore.RED + "                      Closed" + Fore.RESET)
-        
+        device_socket.close()
         time.sleep(0.5)
 
 

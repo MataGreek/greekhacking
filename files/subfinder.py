@@ -42,7 +42,7 @@ time.sleep(4)
 print("")
 print("")
 print("")
-file = open('subdomain.txt', 'r')
+file = open('subdomain.txt', 'w+')
 content = file.read()
 
 subdomains = content.splitlines()

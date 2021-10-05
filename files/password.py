@@ -37,7 +37,6 @@ else:
 
 print("")
 print("")
-print("TEST")
 print("\n" + "#" * 50 + "\n         Please wait. password is generating..." + "\n" + "#" * 50)
 time.sleep(2)
 print("")
