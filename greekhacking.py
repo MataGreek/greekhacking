@@ -340,13 +340,17 @@ def check_updates():
                         print()
 
 
-
                     try:
                         conn.request("GET", "/MataGreek/greekhacking/main/files/password.py")
-                        with open('./files/password.py', 'w+') as kk:
-                            kk.write(newCode)
-                    except KeyboardInterrupt:
-                        print("")
+                        with open ('./files/password.py', 'w+') as kk:
+                            newCode1 = conn.getresponse().read().strip().decode()
+
+                            currentkk = kk.read().strip()
+                            if newCode1 != currentkk:
+                                kk.write(newCode1)
+                    except Exception as p:
+                        print(" Error: ", p)
+                   
 
 
 
