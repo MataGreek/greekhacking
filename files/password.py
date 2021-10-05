@@ -1,6 +1,7 @@
 import random
 import time
 import pyfiglet
+import os, sys  
 from typing import Text
 import hashlib
 import colorama
@@ -80,5 +81,5 @@ for x in range(amount):
                 print("")
                 print("")
                 print("")
-    else:
-                quit()
+    elif ask == 'n' or 'no' or 'No' or 'NO':
+        sys.exit()
