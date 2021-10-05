@@ -22,7 +22,6 @@ print("-" * 70)
 print(Fore.RED + "          Created by Mata | https://www.greekhacking.gr/" + Fore.RESET)
 print("-" * 70)
 print("")
-print("SS")
 print("")
 
 
