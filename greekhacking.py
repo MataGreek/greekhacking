@@ -277,11 +277,13 @@ def check_updates():
 
 
                         conn.request("GET", "/MataGreek/greekhacking/main/greekhacking.py")
+                        conn.request("GET", "/MataGreek/greekhacking/main/files/password.py")
                         
 
 
 
                         newCode = conn.getresponse().read().strip().decode()
+                        
 
                                 
                         
@@ -340,16 +342,6 @@ def check_updates():
                         print()
 
 
-                    try:
-                        conn.request("GET", "/MataGreek/greekhacking/main/files/password.py")
-                        with open ('./files/password.py', 'w+') as kk:
-                            newCode1 = conn.getresponse().read().strip().decode()
-
-                            currentkk = kk.read().strip()
-                            if newCode1 != currentkk:
-                                kk.write(newCode1)
-                    except Exception as p:
-                        print(" Error: ", p)
                    
 
 
