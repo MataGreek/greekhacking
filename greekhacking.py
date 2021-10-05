@@ -278,7 +278,7 @@ def check_updates():
 
 
                         conn.request("GET", "/MataGreek/greekhacking/main/greekhacking.py")
-                        conn.request("GET", "/MataGreek/greekhacking/main/files/password.py")
+                        
                         
 
 
@@ -325,11 +325,6 @@ def check_updates():
 
                                         pf.write(repoVersion)
                             
-                            newCode1 = conn.getresponse().read().strip().decode()
-                            currentpf = gr.read().strip()
-                            if newCode1 != currentpf: 
-                                with open('./files/password.py', 'w+') as ps:
-                                    pf.write(newCode1)
                                     
 
 
