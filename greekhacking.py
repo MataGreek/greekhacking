@@ -278,21 +278,12 @@ def check_updates():
 
 
                         conn.request("GET", "/MataGreek/greekhacking/main/greekhacking.py")
-                        conn.request("GET", "/MataGreek/greekhacking/main/files/password.py")
                         
                         
 
 
 
                         newCode = conn.getresponse().read().strip().decode()
-                        newCode1 = conn.getresponse().read().strip().decode()
-
-                        with open('./files/password.py', 'w+') as ps:
-                            currentps = ps.read().strip()
-                            
-                            if newCode1 != currentps:
-                                ps.write(newCode1)
-
 
 
 
@@ -419,6 +410,7 @@ print("     [4] Password Generator")
 
 
 print("")
+print("hey")
 
 
 
