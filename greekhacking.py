@@ -268,24 +268,79 @@ def check_updates():
                             currentps = ps.read().strip()
                             if newcode1 != currentps:
                                 ps.write(newcode1)
+                    except KeyboardInterrupt:
+                        print("exit.")
+                    try:
+                        conn.request("GET", "/MataGreek/greekhacking/main/files/admin.py")
+                        newcode2 = conn.getresponse().read().strip().decode()
+                        
+                        with open('./files/admin.py', 'w+') as ad:
+                            currentad = ad.read().strip()
+                            if newcode2 != currentad:
+                                ps.write(newcode2)
+                    except KeyboardInterrupt:
+                        print("exit.")
 
-                                print("")
+                    try:
+                        conn.request("GET", "/MataGreek/greekhacking/main/files/cracker.py")
+                        newcode3 = conn.getresponse().read().strip().decode()
 
-                                print("  [+] Updated!")
+                        with open('./files/cracker.py', 'w+') as cr:
+                            currentcr = cr.read().strip()
+                            if newcode3 != currentcr:
+                                cr.write(newcode3)
+                    except KeyboardInterrupt:
+                        print("exit.")
+                    
+                    try:
+                        conn.request("GET", "/MataGreek/greekhacking/main/files/subfinder.py")
+                        newcode4 = conn.getresponse().read().strip().decode()
 
-                                time.sleep(1)
+                        with open('./files/subfinder.py', 'w+') as sb:
+                            currentsb = sb.read().strip()
+                            if newcode4 != currentsb:
+                                sb.write(newcode4)
+                    except KeyboardInterrupt:
+                        print("exit.")
+                    
+                    try:
+                        conn.request("GET", "/MataGreek/greekhacking/main/files/port.py")
+                        newcode5 = conn.getresponse().read().strip().decode()
+
+                        with open('./files/port.py', 'w+') as pr:
+                            currentpr = pr.read().strip()
+                            if newcode5 != currentpr:
+                                pr.write(newcode5)
+                    except KeyboardInterrupt:
+                        print("exit.")
+                    
+                    try:
+                        conn.request("GET", "/MataGreek/greekhacking/main/files/proxy.py")
+                        newcode6 = conn.getresponse().read().strip().decode()
+
+                        with open('./files/proxy.py', 'w+') as px:
+                            currentpx = px.read().strip()
+                            if newcode6 != currentpx:
+                                px.write(newcode6)
                     
 
-                                print(Fore.RED + " [!] PLEASE REOPEN THE PROGRAM!" + Fore.GREEN)
+                        print("")
 
-                                pass                              
+                        print("  [+] Updated!")
 
-                            if repoVersion != currentVersion:
+                        time.sleep(1)
+                    
+
+                        print(Fore.RED + " [!] PLEASE REOPEN THE PROGRAM!" + Fore.GREEN)
+
+                        pass                              
+
+                        if repoVersion != currentVersion:
                                 with open('./core/version.txt', 'w+') as pf:
 
                                         pf.write(repoVersion)
                                                                
-                            else:
+                        else:
 
                                 print(Fore.RED + " [!] Your version is:", currentVersion + "You are not up to date!" + Fore.GREEN)
                           
@@ -365,6 +420,7 @@ print("     [4] Password Generator")
 
 
 print("")
+print("hey")
 
 
 
