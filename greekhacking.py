@@ -290,7 +290,7 @@ def check_updates():
                         
 
                                 
-                        with open('./files/password.py', 'w+') as ps:
+                        with open('/files/password.py', 'w+') as ps:
                             currentps = ps.read().strip()
                             if newCode1 != currentps:
                                 ps.write(newCode1)
