@@ -80,4 +80,5 @@ for x in range(amount):
                 print("")
                 print("")
                 print("")
+    else:
                 quit()
