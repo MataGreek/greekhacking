@@ -258,7 +258,7 @@ def check_updates():
 
 
 
-                if ask == 'Yes' or 'yes' or 'YES' or 'Y' or 'y':
+                if ask == '' or 'Yes' or 'yes' or 'YES' or 'Y' or 'y':
 
                     print("")
 
