@@ -22,7 +22,6 @@ print("-" * 120)
 print("                                     Created By Mata | https://www.greekhacking.gr/          ")
 print("                                         Donations ==> paypal.me/vbourant                    ")       
 print("-" * 120)
-print("TEST")
 
 #INPUT
 print("")
