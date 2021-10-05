@@ -278,7 +278,7 @@ def check_updates():
 
 
                         conn.request("GET", "/MataGreek/greekhacking/main/greekhacking.py")
-                        conn.request("GET", "/MataGreek/greekhacking/main/files/password.py")
+                        
                         
                         
 
@@ -402,7 +402,7 @@ print("")
 print("     [3] Port Scanner")
 
 
-print("DD")
+
 print("")
 
 
@@ -412,6 +412,7 @@ print("     [4] Password Generator")
 
 
 print("")
+print("hey")
 
 
 
