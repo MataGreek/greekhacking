@@ -270,38 +270,8 @@ def check_updates():
                                 ps.write(newcode1)
                     except KeyboardInterrupt:
                         print("exit.")
-                    try:
-                        conn.request("GET", "/MataGreek/greekhacking/main/files/admin.py")
-                        newcode2 = conn.getresponse().read().strip().decode()
-                        
-                        with open('./files/admin.py', 'w+') as ad:
-                            currentad = ad.read().strip()
-                            if newcode2 != currentad:
-                                ps.write(newcode2)
-                    except KeyboardInterrupt:
-                        print("exit.")
 
-                    try:
-                        conn.request("GET", "/MataGreek/greekhacking/main/files/cracker.py")
-                        newcode3 = conn.getresponse().read().strip().decode()
-
-                        with open('./files/cracker.py', 'w+') as cr:
-                            currentcr = cr.read().strip()
-                            if newcode3 != currentcr:
-                                cr.write(newcode3)
-                    except KeyboardInterrupt:
-                        print("exit.")
                     
-                    try:
-                        conn.request("GET", "/MataGreek/greekhacking/main/files/subfinder.py")
-                        newcode4 = conn.getresponse().read().strip().decode()
-
-                        with open('./files/subfinder.py', 'w+') as sb:
-                            currentsb = sb.read().strip()
-                            if newcode4 != currentsb:
-                                sb.write(newcode4)
-                    except KeyboardInterrupt:
-                        print("exit.")
                     
                     try:
                         conn.request("GET", "/MataGreek/greekhacking/main/files/port.py")
@@ -394,7 +364,6 @@ print("     [1] Subdomain Finder")
 
 
 print("")
-print("TEST")
 
 
 
