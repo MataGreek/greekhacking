@@ -410,7 +410,6 @@ print("     [4] Password Generator")
 
 
 print("")
-print("hey")
 
 
 
