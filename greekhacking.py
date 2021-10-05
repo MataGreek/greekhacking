@@ -422,6 +422,7 @@ print("")
 
 
 print("     [6] MD5 Cracker")
+print("test")
 
 
 
