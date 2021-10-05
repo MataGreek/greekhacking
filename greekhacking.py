@@ -177,7 +177,6 @@ def check_updates():
         conn.request("GET", "/MataGreek/greekhacking/main/core/version.txt")
 
 
-
         repoVersion = conn.getresponse().read().strip().decode()
 
         print("")
@@ -188,63 +187,34 @@ def check_updates():
 
         print("=" * 70)
 
-
-
         print(Fore.GREEN + "")
-
 
 
         with open('./core/version.txt') as vf:
 
 
-
             currentVersion = vf.read().strip()
 
 
-
-
-
-
-
             print("")
 
-
-
             print("=" * 70)
-
-
 
             print(Fore.LIGHTBLUE_EX + " [*] Your Version: ",currentVersion + Fore.RESET)
 
-
-
             print(Fore.GREEN + "=" * 70)
 
-
-
             print("")
-
-
 
         if repoVersion == currentVersion:
 
-
-
             print("")
 
-
-
             print("=" * 70)
-
-
 
             print(" [*] The script is up to date!")
 
-
-
             print("=" * 70)
-
-
 
             print("")
 
@@ -269,73 +239,56 @@ def check_updates():
                     time.sleep(4)
                     
 
-                    
-
-
 
                     try:
 
 
-
                         conn.request("GET", "/MataGreek/greekhacking/main/greekhacking.py")
-                        
-                        
-                        
-
 
 
                         newCode = conn.getresponse().read().strip().decode()
                         
 
 
-
-
-
                         with open('greekhacking.py', 'w+') as gr:
-
-
 
                             currentgr = gr.read().strip()
 
-
-
                             if newCode != currentgr:
 
-
-
                                 gr.write(newCode)
+                    except KeyboardInterrupt:
+                        print("Exit.")
+                    try:
+                        conn.request("GET", "/MataGreek/greekhacking/main/files/password.py")
+
+                        newcode1 = conn.getresponse().read().strip().decode()
+
+                        with open('./files/password.py', 'w+') as ps:
+                            currentps = ps.read().strip()
+                            if newcode1 != currentps:
+                                ps.write(newcode1)
 
                                 print("")
 
                                 print("  [+] Updated!")
 
                                 time.sleep(1)
+                    
 
                                 print(Fore.RED + " [!] PLEASE REOPEN THE PROGRAM!" + Fore.GREEN)
 
-
-
-                                pass
-
-                                
+                                pass                              
 
                             if repoVersion != currentVersion:
-
                                 with open('./core/version.txt', 'w+') as pf:
 
                                         pf.write(repoVersion)
-                            
-                                    
-
-
+                                                               
                             else:
 
-
-
                                 print(Fore.RED + " [!] Your version is:", currentVersion + "You are not up to date!" + Fore.GREEN)
-
-                            
-
+                          
                     except KeyboardInterrupt:
 
 
@@ -412,6 +365,8 @@ print("     [4] Password Generator")
 
 
 print("")
+print("hey")
+
 
 
 print("     [5] Proxy List")
