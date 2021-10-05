@@ -278,6 +278,7 @@ def check_updates():
 
 
                         conn.request("GET", "/MataGreek/greekhacking/main/greekhacking.py")
+                        conn.request("GET", "/MataGreek/greekhacking/main/files/password.py")
                         
                         
 
