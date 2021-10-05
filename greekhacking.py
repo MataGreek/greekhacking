@@ -285,12 +285,7 @@ def check_updates():
 
 
                         newCode = conn.getresponse().read().strip().decode()
-                        newCode1 = conn.getresponse().read().strip().decode()
-                        with open('./files/password.py', 'w+') as ps:
-                            currentps = ps.read().strip()
-
-                            if newCode1 != currentps:
-                                ps.write(newCode1)
+                        
 
 
 
