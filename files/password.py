@@ -69,7 +69,7 @@ for x in range(amount):
     print("")
     print(Fore.WHITE + "")
     ask = input("   Do you want to encrypt it? (Y/n):  " + Fore.GREEN)
-    if ask == 'y' or 'Y' or 'YES' or 'yes' or 'Yes':
+    if ask == '' or 'y' or 'Y' or 'YES' or 'yes' or 'Yes':
 
                 result = hashlib.md5(password.encode())
                 print("")
