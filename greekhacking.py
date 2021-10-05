@@ -267,8 +267,6 @@ def check_updates():
                     print("")
 
                     time.sleep(4)
-                else:
-                    print(Fore.RED + "  Not able to open without the new update. For any problems please reinstall the program." + Fore.GREEN)
                     
 
                     
