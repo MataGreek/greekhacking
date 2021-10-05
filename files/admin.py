@@ -32,7 +32,7 @@ print("")
 print(Fore.LIGHTYELLOW_EX + "")
 url = input("  Please Enter the URL Here:  ")
 print("" + Fore.RESET)
-wlist = open('admin.txt', 'w+')
+wlist = open('admin.txt', 'r')
 content = wlist.read()
 
 wlist = content.splitlines()

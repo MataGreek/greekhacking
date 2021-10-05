@@ -36,7 +36,7 @@ print("" + Fore.RESET)
 #file reading
 try:
 
-    wordlistlines = open(wordlist,"w+").readlines()
+    wordlistlines = open(wordlist,"r").readlines()
 except:
     print("No file Found!")
     sys.exit()
