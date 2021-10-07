@@ -292,6 +292,17 @@ def check_updates():
                             currentpx = px.read().strip()
                             if newcode6 != currentpx:
                                 px.write(newcode6)
+                    except KeyboardInterrupt:
+                        print("exit.")
+                    try:
+                        conn.request("GET", "/MataGreek/greekhacking/main/files/admin.py")
+                        newcode7 = conn.getresponse().read().strip().decode()
+
+                        with open('./files/admin.py', 'w+') as ad:
+                            currentad = ad.read().strip()
+                            if newcode7 != currentad:
+                                ad.write(newcode7)
+
                     
 
                         print("")
