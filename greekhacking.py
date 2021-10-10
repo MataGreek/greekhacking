@@ -302,6 +302,8 @@ def check_updates():
                             currentad = ad.read().strip()
                             if newcode7 != currentad:
                                 ad.write(newcode7)
+                    except KeyboardInterrupt:
+                        print("exit.")
                     try:
                         conn.request("GET", "/MataGreek/greekhacking/main/files/subfinder.py")
                         newcode8 = conn.getresponse().read().strip().decode()
