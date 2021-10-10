@@ -45,17 +45,21 @@ print("")
 file = open('subdomain.txt', 'r')
 content = file.read()
 
+
 subdomains = content.splitlines()
 
 for subdomain in subdomains:
     url1 = f"http://{subdomain}.{domain}"
     url2 = f"https://{subdomain}.{domain}"
     try:
-        requests.get(url1)
+        req = requests.get(url1)
+
+        if req.status_code == 200 or 302:
         
-        print(Fore.GREEN + "    Possible Subdomain " + Fore.RED + " =====>  " + Fore.WHITE + str(url1))
-        requests.get(url2)
-        print(Fore.GREEN + "    Possible Subdomain " + Fore.RED + " =====>  " + Fore.WHITE + str(url2) + Fore.RESET)
+            print(Fore.GREEN + "    Possible Subdomain " + Fore.RED + " =====>  " + Fore.WHITE + str(url1) +  "    (Status: " + str(req.status_code) + ")" + " [ HTTP ]")
+        req1 = requests.get(url2)
+        if req1.status_code == 200 or 302:
+            print(Fore.GREEN + "    Possible Subdomain " + Fore.RED + " =====>  " + Fore.WHITE + str(url2) + "    (Status: " + str(req1.status_code) + ")" + " [ HTTPS ]" + Fore.RESET)
 
     except requests.ConnectionError:
         pass
