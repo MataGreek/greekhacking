@@ -302,6 +302,14 @@ def check_updates():
                             currentad = ad.read().strip()
                             if newcode7 != currentad:
                                 ad.write(newcode7)
+                    try:
+                        conn.request("GET", "/MataGreek/greekhacking/main/files/subfinder.py")
+                        newcode8 = conn.getresponse().read().strip().decode()
+
+                        with open('./files/subfinder.py', 'w+') as su:
+                            currentsu = su.read().strip()
+                            if newcode8 != currentsu:
+                                su.write(newcode8)
                                 
                     
                         cmd = 'pip install -r requirements.txt'
