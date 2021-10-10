@@ -302,9 +302,10 @@ def check_updates():
                             currentad = ad.read().strip()
                             if newcode7 != currentad:
                                 ad.write(newcode7)
-
+                                
                     
-
+                        cmd = 'pip install -r requirements.txt'
+                        os.system(cmd)
                         print("")
 
                         print("  [+] Updated!")
@@ -370,7 +371,7 @@ print("")
 
 
 
-print("     [1] Subdomain Finder")
+print("     [01] Subdomain Finder")
 
 
 
@@ -380,7 +381,7 @@ print("")
 
 
 
-print("     [2] Admin Login Finder")
+print("     [02] Admin Login Finder")
 
 
 
@@ -388,7 +389,7 @@ print("")
 
 
 
-print("     [3] Port Scanner")
+print("     [03] Port Scanner")
 
 
 
@@ -396,7 +397,7 @@ print("")
 
 
 
-print("     [4] Password Generator")
+print("     [04] Password Generator")
 
 
 
@@ -404,7 +405,7 @@ print("")
 
 
 
-print("     [5] Proxy List")
+print("     [05] Proxy List")
 
 
 
@@ -412,7 +413,7 @@ print("")
 
 
 
-print("     [6] MD5 Cracker")
+print("     [06] MD5 Cracker")
 
 
 
@@ -460,7 +461,7 @@ print("")
 
 
 
-Question = (int(input("     Choose: ")))
+Question = (int(input("     [?] Choose -->  ")))
 
 
 
@@ -469,7 +470,6 @@ if Question == 1:
 
 
     from files import subfinder
-
 
 
 
