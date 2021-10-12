@@ -115,13 +115,16 @@ for subdomain in subdomains:
         
 
             print(Fore.GREEN + "    Possible Subdomain " + Fore.RED + " =====>  " + Fore.WHITE + str(url1) +  "    (Status: " + str(req.status_code) + ")" + " [ HTTP ]")
+        else:
+            pass
 
         req1 = requests.get(url2)
 
         if req1.status_code != 403 or 404:
 
             print(Fore.GREEN + "    Possible Subdomain " + Fore.RED + " =====>  " + Fore.WHITE + str(url2) + "    (Status: " + str(req1.status_code) + ")" + " [ HTTPS ]" + Fore.RESET)
-
+        else:
+            pass
 
     except requests.ConnectionError:
 
