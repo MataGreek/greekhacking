@@ -65,7 +65,7 @@ if Question == '' or 'Y' or 'y' or 'Yes' or 'yes' or 'YES':
 
         
 
-if Question != '' or 'Y' or 'y' or 'Yes' or 'yes' or 'YES':
+if Question == 'no' or 'n' or 'NO' or 'No' or 'N':
     import greekhacking
     
 
@@ -163,6 +163,6 @@ for x in range(amount):
 
                 print("")
 
-    if ask != '' or 'Y' or 'y' or 'Yes' or 'yes' or 'YES':
+    if ask == 'no' or 'n' or 'NO' or 'No' or 'N':
         print(" Exit.")
         quit()
