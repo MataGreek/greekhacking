@@ -62,9 +62,9 @@ try:
 
         time.sleep(1)
 
-        pass
+        
 
-    else:
+    if Question == "No" or "n" or "no" or "N":
 
         print(" Maybe next time.")
 
