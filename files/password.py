@@ -61,11 +61,12 @@ Question = input("  Do you want to Generate a safe password?(Y/n) :   ")
 if Question == '' or 'Y' or 'y' or 'Yes' or 'yes' or 'YES':
 
     print("")
+    pass
 
         
 
-else:
-    quit()
+if Question != '' or 'Y' or 'y' or 'Yes' or 'yes' or 'YES':
+    import greekhacking
     
 
 
@@ -162,6 +163,6 @@ for x in range(amount):
 
                 print("")
 
-    else:
+    if ask != '' or 'Y' or 'y' or 'Yes' or 'yes' or 'YES':
         print(" Exit.")
         quit()
