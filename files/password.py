@@ -60,15 +60,14 @@ Question = input("  Do you want to Generate a safe password?(Y/n) :   ")
 
 if Question == "Y" or "y" or "Yes" or "yes" or "YES":
 
-    time.sleep(1)
+    pass
 
         
 
 else:
 
-    print(" Maybe next time.")
-
-    sys.exit()
+    os.system("cls||clear")
+    import greekhacking
 
 
 
