@@ -58,16 +58,15 @@ Question = input("  Do you want to Generate a safe password?(Y/n) :   ")
 
 
 
-if Question == "Y" or "y" or "Yes" or "yes" or "YES":
+if Question == '' or 'Y' or 'y' or 'Yes' or 'yes' or 'YES':
 
-    pass
+    print("")
 
         
 
 else:
-
-    os.system("cls||clear")
-    import greekhacking
+    quit()
+    
 
 
 
@@ -165,4 +164,4 @@ for x in range(amount):
 
     else:
         print(" Exit.")
-        sys.exit()
+        quit()
