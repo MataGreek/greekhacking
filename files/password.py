@@ -74,96 +74,96 @@ else:
 
 
 
+print("")
+
+print("")
+
+print("\n" + "#" * 50 + "\n         Please wait. password is generating..." + "\n" + "#" * 50)
+
+time.sleep(2)
+
+print("")
+
+print("")
+
+print("\n" + "#" * 50 + Fore.RED + "\n        DO NOT SHARE YOUR PASSWORD TO ANYONE!" + Fore.RESET + "\n" + "#" * 50)
+
+print("")
+
+print("")
+
+print("")
+
+print("")
+
+time.sleep(2)
+
+
+
+if upper:
+
+    all += uppercase_letters
+
+
+
+if lower:
+
+    all += lowercase_letters
+
+if nums:
+
+    all += digits
+
+if syms:
+
+    all += symbols
+
+
+
+length = 20
+
+amount = 1
+
+
+
+for x in range(amount):
+
+    password = "".join(random.sample(all,length))
+
+    print(Fore.LIGHTWHITE_EX +"                         Your Password is: " + Fore.GREEN + password)
+
+    print("")
+
     print("")
 
     print("")
 
-    print("\n" + "#" * 50 + "\n         Please wait. password is generating..." + "\n" + "#" * 50)
+    print(Fore.WHITE + "")
 
-    time.sleep(2)
+    ask = input("   Do you want to encrypt it? (Y/n):  " + Fore.GREEN)
 
-    print("")
-
-    print("")
-
-    print("\n" + "#" * 50 + Fore.RED + "\n        DO NOT SHARE YOUR PASSWORD TO ANYONE!" + Fore.RESET + "\n" + "#" * 50)
-
-    print("")
-
-    print("")
-
-    print("")
-
-    print("")
-
-    time.sleep(2)
+    if ask == '' or 'y' or 'Y' or 'YES' or 'yes' or 'Yes':
 
 
 
-    if upper:
+                result = hashlib.md5(password.encode())
 
-        all += uppercase_letters
+                print("")
 
+                print("")
 
+                print("")
 
-    if lower:
+                print(Fore.GREEN + "                        Your hashed password is: " + Fore.RED, end="")
 
-        all += lowercase_letters
+                print(result.hexdigest())
 
-    if nums:
+                print("")
 
-        all += digits
+                print("")
 
-    if syms:
+                print("")
 
-        all += symbols
-
-
-
-    length = 20
-
-    amount = 1
-
-
-
-    for x in range(amount):
-
-        password = "".join(random.sample(all,length))
-
-        print(Fore.LIGHTWHITE_EX +"                         Your Password is: " + Fore.GREEN + password)
-
-        print("")
-
-        print("")
-
-        print("")
-
-        print(Fore.WHITE + "")
-
-        ask = input("   Do you want to encrypt it? (Y/n):  " + Fore.GREEN)
-
-        if ask == '' or 'y' or 'Y' or 'YES' or 'yes' or 'Yes':
-
-
-
-                    result = hashlib.md5(password.encode())
-
-                    print("")
-
-                    print("")
-
-                    print("")
-
-                    print(Fore.GREEN + "                        Your hashed password is: " + Fore.RED, end="")
-
-                    print(result.hexdigest())
-
-                    print("")
-
-                    print("")
-
-                    print("")
-
-        else:
-            print(" Exit.")
-            sys.exit()
+    else:
+        print(" Exit.")
+        sys.exit()
