@@ -66,8 +66,8 @@ try:
 
         
 
-    if Question == 'no' or 'n' or 'NO' or 'No' or 'N':
-        import greekhacking
+    else:
+        quit()
 
 except Exception as e:
     print("Error: ", e)
