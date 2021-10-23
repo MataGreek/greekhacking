@@ -54,22 +54,23 @@ print("")
 
 print("")
 
-Question = input("  Do you want to Generate a safe password?(Y/n) :   ")
+try:
+    Question = input("  Do you want to Generate a safe password?(Y/n) :   ")
 
 
 
-if Question == '' or 'Y' or 'y' or 'Yes' or 'yes' or 'YES':
+    if Question == '' or 'Y' or 'y' or 'Yes' or 'yes' or 'YES':
 
-    print("")
-    pass
+        print("")
 
         
 
-else:
-    quit()
+    else:
+        quit()
+
+except Exception as e:
+    print("Error: ", e)
     
-
-
 
 
 
@@ -163,6 +164,6 @@ for x in range(amount):
 
                 print("")
 
-    else:
+    if ask == 'no' or 'n' or 'NO' or 'No' or 'N':
         print(" Exit.")
         quit()
