@@ -322,8 +322,9 @@ def check_updates():
 
                         time.sleep(1)
                     
-
-                        print(Fore.RED + " [!] PLEASE REOPEN THE PROGRAM!" + Fore.GREEN)
+                        print("")
+                        print(Fore.RED + " [!] PLEASE REOPEN THE PROGRAM FOR THE UPDATES TAKE AFFECT!" + Fore.GREEN)
+                        print("")
 
                         pass                              
 
