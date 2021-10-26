@@ -139,33 +139,31 @@ for x in range(amount):
 
     print(Fore.WHITE + "")
 
-    def asker():
 
-        ask = input("   Do you want to encrypt it? (Y/n):  " + Fore.GREEN)
-
-
-        if ask == '' or 'y' or 'Y' or 'YES' or 'yes' or 'Yes':
+    ask = input("   Do you want to encrypt it? (Y/n):  " + Fore.GREEN)
 
 
 
-                    result = hashlib.md5(password.encode())
 
-                    print("")
+    result = hashlib.md5(password.encode())
 
-                    print("")
+    print("")
 
-                    print("")
+    print("")
 
-                    print(Fore.GREEN + "                        Your hashed password is: " + Fore.RED, end="")
+    print("")
 
-                    print(result.hexdigest())
+    if ask == '' or 'y' or 'Y' or 'YES' or 'yes' or 'Yes':
+                print(Fore.GREEN + "                        Your hashed password is: " + Fore.RED, end="")
 
-                    print("")
+                print(result.hexdigest())
 
-                    print("")
+                print("")
 
-                    print("")
+                print("")
 
-        elif ask == 'n' or 'no' or 'N' or 'NO' or 'No':
-            sys.exit()
-asker()
+                print("")
+
+
+    else:
+        quit()
