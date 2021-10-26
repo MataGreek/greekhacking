@@ -54,22 +54,21 @@ print("")
 
 print("")
 
-try:
-    Question = input("  Do you want to Generate a safe password?(Y/n) :   ")
+
+Question = input("  Do you want to Generate a safe password?(Y/n) :   ")
 
 
 
-    if Question == '' or 'Y' or 'y' or 'Yes' or 'yes' or 'YES':
+if Question == '' or 'Y' or 'y' or 'Yes' or 'yes' or 'YES':
 
-        print("")
+    pass
 
         
 
-    else:
-        quit()
+else:
+    quit()
 
-except Exception as e:
-    print("Error: ", e)
+
     
 
 
@@ -140,30 +139,38 @@ for x in range(amount):
 
     print(Fore.WHITE + "")
 
+
+    def hash_pass():
+                    result = hashlib.md5(password.encode())
+
+                    print("")
+
+                    print("")
+
+                    print("")
+
+                    print(Fore.GREEN + "                        Your hashed password is: " + Fore.RED, end="")
+
+                    print(result.hexdigest())
+
+                    print("")
+
+                    print("")
+
+                    print("")
+hash_pass()
+
+def ask_hash():
+
     ask = input("   Do you want to encrypt it? (Y/n):  " + Fore.GREEN)
 
+
     if ask == '' or 'y' or 'Y' or 'YES' or 'yes' or 'Yes':
+        hash_pass()
 
 
 
-                result = hashlib.md5(password.encode())
 
-                print("")
-
-                print("")
-
-                print("")
-
-                print(Fore.GREEN + "                        Your hashed password is: " + Fore.RED, end="")
-
-                print(result.hexdigest())
-
-                print("")
-
-                print("")
-
-                print("")
-
-    if ask == 'no' or 'n' or 'NO' or 'No' or 'N':
-        print(" Exit.")
-        quit()
+    else:
+        sys.exit()
+ask_hash()
