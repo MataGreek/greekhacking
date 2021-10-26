@@ -16,7 +16,8 @@ from colorama import *
 
 colorama.init()
 
-
+yes_choice = ['Yes', 'y', 'Y', 'yes', 'YES']
+no_choice = ['No', 'n', 'no', 'NO', 'N']
 
 print("" + Fore.LIGHTBLUE_EX)
 
@@ -59,7 +60,7 @@ Question = input("  Do you want to Generate a safe password?(Y/n) :   ")
 
 
 
-if Question == '' or 'Y' or 'y' or 'Yes' or 'yes' or 'YES':
+if Question in yes_choice:
 
     pass
 
@@ -140,37 +141,29 @@ for x in range(amount):
     print(Fore.WHITE + "")
 
 
-    def hash_pass():
-                    result = hashlib.md5(password.encode())
-
-                    print("")
-
-                    print("")
-
-                    print("")
-
-                    print(Fore.GREEN + "                        Your hashed password is: " + Fore.RED, end="")
-
-                    print(result.hexdigest())
-
-                    print("")
-
-                    print("")
-
-                    print("")
-hash_pass()
-
-def ask_hash():
-
-    ask = input("   Do you want to encrypt it? (Y/n):  " + Fore.GREEN)
 
 
-    if ask == '' or 'y' or 'Y' or 'YES' or 'yes' or 'Yes':
-        hash_pass()
+    
+ask = input("   Do you want to encrypt it? (Y/n):  " + Fore.GREEN)
+
+if ask in yes_choice:
+                result = hashlib.md5(password.encode())
+
+                print("")
+
+                print("")
+
+                print("")
+                print(Fore.GREEN + "                        Your hashed password is: " + Fore.RED, end="")
+
+                print(result.hexdigest())
+
+                print("")
+
+                print("")
+
+                print("")
 
 
-
-
-    else:
-        sys.exit()
-ask_hash()
+else:
+    quit()
