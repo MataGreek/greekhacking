@@ -16,7 +16,8 @@ from colorama import *
 
 colorama.init()
 
-
+yes_choice = ['Yes', 'y', 'Y', 'yes', 'YES']
+no_choice = ['No', 'n', 'no', 'NO', 'N']
 
 print("" + Fore.LIGHTBLUE_EX)
 
@@ -59,7 +60,7 @@ Question = input("  Do you want to Generate a safe password?(Y/n) :   ")
 
 
 
-if Question == '' or 'Y' or 'y' or 'Yes' or 'yes' or 'YES':
+if Question in yes_choice:
 
     pass
 
@@ -142,8 +143,6 @@ for x in range(amount):
 
 
 
-yes_choice = ['Yes', 'y', 'Y', 'yes', 'YES']
-no_choice = ['No', 'n', 'no', 'NO', 'N']
     
 ask = input("   Do you want to encrypt it? (Y/n):  " + Fore.GREEN)
 
