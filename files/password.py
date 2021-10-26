@@ -166,6 +166,6 @@ for x in range(amount):
 
                     print("")
 
-        else:
-            quit()
+        elif ask == 'n' or 'no' or 'N' or 'NO' or 'No':
+            sys.exit()
 asker()
