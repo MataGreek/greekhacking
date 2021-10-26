@@ -140,20 +140,21 @@ for x in range(amount):
     print(Fore.WHITE + "")
 
 
-    ask = input("   Do you want to encrypt it? (Y/n):  " + Fore.GREEN)
 
 
+yes_choice = ['Yes', 'y', 'Y', 'yes', 'YES']
+no_choice = ['No', 'n', 'no', 'NO', 'N']
+    
+ask = input("   Do you want to encrypt it? (Y/n):  " + Fore.GREEN)
 
+if ask in yes_choice:
+                result = hashlib.md5(password.encode())
 
-    result = hashlib.md5(password.encode())
+                print("")
 
-    print("")
+                print("")
 
-    print("")
-
-    print("")
-
-    if ask == '' or 'y' or 'Y' or 'YES' or 'yes' or 'Yes':
+                print("")
                 print(Fore.GREEN + "                        Your hashed password is: " + Fore.RED, end="")
 
                 print(result.hexdigest())
@@ -165,5 +166,5 @@ for x in range(amount):
                 print("")
 
 
-    else:
-        quit()
+else:
+    quit()
