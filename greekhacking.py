@@ -104,6 +104,9 @@ from colorama import *
 
 colorama.init()
 
+yes_choice = ['Yes', 'y', 'Y', 'yes', 'YES']
+no_choice = ['No', 'n', 'no', 'NO', 'N']
+
 
 
 
@@ -228,7 +231,7 @@ def check_updates():
 
 
 
-                if ask == '' or 'Yes' or 'yes' or 'YES' or 'Y' or 'y':
+                if ask in yes_choice:
 
                     print("")
 
@@ -335,7 +338,7 @@ def check_updates():
                                                                
                         else:
 
-                                print(Fore.RED + " [!] Your version is:", currentVersion + "You are not up to date!" + Fore.GREEN)
+                                print(Fore.RED + " [!] Your version is:", currentVersion + "You are not up to date! Please update the program." + Fore.GREEN)
                           
                     except KeyboardInterrupt:
 
