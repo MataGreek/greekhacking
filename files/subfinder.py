@@ -108,6 +108,9 @@ for subdomain in subdomains:
 
     url2 = f"https://{subdomain}.{domain}"
 
+    size1 = print(len(url1.read()))
+    size2 = print(len(url2.read()))
+
 
 
     try:
@@ -120,7 +123,7 @@ for subdomain in subdomains:
 
         
 
-            print(Fore.GREEN + "    Possible Subdomain " + Fore.RED + " =====>  " + Fore.WHITE + str(url1) +  "    (Status: " + str(req.status_code) + ")" + " [Size: " + str(len(url1())) + "]")
+            print(Fore.GREEN + "    Possible Subdomain " + Fore.RED + " =====>  " + Fore.WHITE + str(url1) +  "    (Status: " + str(req.status_code) + ")" + " [Size: " + str(size1) + "]")
         else:
             pass
 
@@ -128,7 +131,7 @@ for subdomain in subdomains:
 
         if req1.status_code != 403 or 404:
 
-            print(Fore.GREEN + "    Possible Subdomain " + Fore.RED + " =====>  " + Fore.WHITE + str(url2) + "    (Status: " + str(req1.status_code) + ")" + " [Size: " + str(len(url2.read())) + "]"+ Fore.RESET)
+            print(Fore.GREEN + "    Possible Subdomain " + Fore.RED + " =====>  " + Fore.WHITE + str(url2) + "    (Status: " + str(req1.status_code) + ")" + " [Size: " + str(size2) + "]"+ Fore.RESET)
         else:
             pass
 
