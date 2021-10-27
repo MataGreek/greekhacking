@@ -23,6 +23,7 @@ import colorama
 import time
 
 import sys
+import urllib.request
 
 from colorama import *
 
@@ -100,17 +101,19 @@ subdomains = content.splitlines()
 
 for subdomain in subdomains:
 
-    
 
     url1 = f"http://{subdomain}.{domain}"
     
+    urlopen = urllib.request.urlopen(url1)
     
 
     url2 = f"https://{subdomain}.{domain}"
 
-    size1 = print(len(url1.read()))
-    size2 = print(len(url2.read()))
+    urlopen2 = urllib.request.urlopen(url2)
 
+
+    size1 = print(len(urlopen.read()))
+    size2 = print(len(urlopen2.read()))
 
 
     try:
