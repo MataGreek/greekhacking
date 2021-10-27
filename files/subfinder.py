@@ -23,7 +23,6 @@ import colorama
 import time
 
 import sys
-from urllib.request import Request, urlopen
 
 from colorama import *
 
@@ -104,16 +103,14 @@ for subdomain in subdomains:
 
     url1 = f"http://{subdomain}.{domain}"
     
-    urlopenn = urlopen(url1).read()
     
 
     url2 = f"https://{subdomain}.{domain}"
 
-    urlopen2 = urlopen(url2).read()
+  
 
 
-    size1 = print(len(urlopenn))
-    size2 = print(len(urlopen2))
+
 
 
     try:
@@ -126,7 +123,7 @@ for subdomain in subdomains:
 
         
 
-            print(Fore.GREEN + "    Possible Subdomain " + Fore.RED + " =====>  " + Fore.WHITE + str(url1) +  "    (Status: " + str(req.status_code) + ")" + " [Size: " + str(size1) + "]")
+            print(Fore.GREEN + "    Possible Subdomain " + Fore.RED + " =====>  " + Fore.WHITE + str(url1) +  "    (Status: " + str(req.status_code) + ")")
         else:
             pass
 
@@ -134,7 +131,7 @@ for subdomain in subdomains:
 
         if req1.status_code != 403 or 404:
 
-            print(Fore.GREEN + "    Possible Subdomain " + Fore.RED + " =====>  " + Fore.WHITE + str(url2) + "    (Status: " + str(req1.status_code) + ")" + " [Size: " + str(size2) + "]"+ Fore.RESET)
+            print(Fore.GREEN + "    Possible Subdomain " + Fore.RED + " =====>  " + Fore.WHITE + str(url2) + "    (Status: " + str(req1.status_code) + ")" + Fore.RESET)
         else:
             pass
 
