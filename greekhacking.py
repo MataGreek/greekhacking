@@ -104,7 +104,7 @@ from colorama import *
 
 colorama.init()
 
-yes_choice = ['Yes', 'y', 'Y', 'yes', 'YES']
+yes_choice = ['','Yes', 'y', 'Y', 'yes', 'YES']
 no_choice = ['No', 'n', 'no', 'NO', 'N']
 
 
@@ -227,7 +227,7 @@ def check_updates():
 
 
 
-                ask = input("  [+] An update has been found! Do you want to update? (Y/n):   ")
+                ask = input("  [+] An update has been found! Do you want to update? [Y/n]:   ")
 
 
 
