@@ -325,9 +325,7 @@ def check_updates():
 
                         time.sleep(1)
                     
-                        print("")
-                        print(Fore.RED + " [!] PLEASE REOPEN THE PROGRAM FOR THE UPDATES TAKE AFFECT!" + Fore.GREEN)
-                        print("")
+                        import greekhacking
 
                         pass                              
 
