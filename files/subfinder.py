@@ -103,14 +103,13 @@ for subdomain in subdomains:
     
 
     url1 = f"http://{subdomain}.{domain}"
-    view1 = f"view-source:{url1}"
     
 
     url2 = f"https://{subdomain}.{domain}"
-    view2 = f"view-source:{url2}"
 
-    size1 = sys.getsizeof(view1)
-    size2 = sys.getsizeof(view2)
+
+    size1 = sys.getsizeof(subdomain,domain)
+    size2 = sys.getsizeof(subdomain,domain)
     try:
 
         req = requests.get(url1)
