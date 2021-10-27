@@ -324,8 +324,10 @@ def check_updates():
                         print("  [+] Updated!")
 
                         time.sleep(1)
-                    
+
+                        
                         import greekhacking
+                        os.system("cls||clear")
 
                         pass                              
 
