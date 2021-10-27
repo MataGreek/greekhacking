@@ -104,9 +104,10 @@ for subdomain in subdomains:
 
     url1 = f"http://{subdomain}.{domain}"
     view1 = f"view-source:{url1}"
-    view2 = f"view-source:{url2}"
+    
 
     url2 = f"https://{subdomain}.{domain}"
+    view2 = f"view-source:{url2}"
 
     size1 = sys.getsizeof(view1)
     size2 = sys.getsizeof(view2)
