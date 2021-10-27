@@ -324,10 +324,10 @@ def check_updates():
                         print("  [+] Updated!")
 
                         time.sleep(1)
-
-                        
-                        import greekhacking
-                        os.system("cls||clear")
+                    
+                        print("")
+                        print(Fore.RED + " [!] PLEASE REOPEN THE PROGRAM FOR THE UPDATES TAKE AFFECT!" + Fore.GREEN)
+                        print("")
 
                         pass                              
 
