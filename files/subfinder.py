@@ -55,7 +55,7 @@ print("-" * 100)
 
 print(Fore.RESET + "")
 
-
+print(Fore.RED + "     Make sure that you have removed the: http(s)://" + Fore.RESET)
 
 print("")
 
