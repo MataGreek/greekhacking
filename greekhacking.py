@@ -647,7 +647,7 @@ def check_updates():
                     try:
                         conn.request("GET", "/MataGreek/greekhacking/main/subdomain.txt")
                         newcode10 = conn.getresponse().read().strip().decode()
-                        with open ('subdomain.txt', 'w+') as st:
+                        with open('subdomain.txt', 'w+') as st:
                             currentst = st.read().strip()
                             if newcode10 != currentst:
                                 st.write(newcode10)
