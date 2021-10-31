@@ -19,7 +19,8 @@ import requests
 import pyfiglet
 
 import colorama
-
+import datetime
+import socket
 import time
 
 import sys
@@ -27,7 +28,7 @@ import sys
 from colorama import *
 
 colorama.init()
-
+x = datetime.datetime.now()
 
 
 #logo 
@@ -65,6 +66,7 @@ print("")
 print(Fore.YELLOW + "")
 
 domain = input("    Enter Domain here (e.x greekhacking.gr):   ")
+ip = socket.gethostbyname(domain)
 
 print(Fore.RESET + "")
 
@@ -75,16 +77,15 @@ print("")
 print("")
 
 print("")
-
-print(Fore.RED + "                      <================================= Please wait... =================================>" + Fore.RESET)
-
-time.sleep(4)
-
+print("=" * 50)
+print(Fore.RED + "  Scan started:"+ Fore.RESET + str(x))
+print("=" * 50)
+time.sleep(1)
+print("")
+print("                                     Subdomain" + "                Status" + "           IP")
+print("")
 print("")
 
-print("")
-
-print("")
 
 file = open('subdomain.txt', 'r')
 
@@ -118,12 +119,11 @@ for subdomain in subdomains:
         req = requests.get(url1)
 
 
-
         if req.status_code != 403 or 404:
 
         
-
-            print(Fore.GREEN + "    Possible Subdomain " + Fore.RED + " =====>  " + Fore.WHITE + str(url1) +  "    (Status: " + str(req.status_code) + ")")
+            
+            print(Fore.GREEN + "    Possible Subdomain " + Fore.RED + " =====>  " + Fore.WHITE + str(url1) +  "    (Status: " + str(req.status_code) + ")   ", ip)
         else:
             pass
 
@@ -131,7 +131,7 @@ for subdomain in subdomains:
 
         if req1.status_code != 403 or 404:
 
-            print(Fore.GREEN + "    Possible Subdomain " + Fore.RED + " =====>  " + Fore.WHITE + str(url2) + "    (Status: " + str(req1.status_code) + ")" + Fore.RESET)
+            print(Fore.GREEN + "    Possible Subdomain " + Fore.RED + " =====>  " + Fore.WHITE + str(url2) + "    (Status: " + str(req1.status_code) + ")   ", ip)
         else:
             pass
 
@@ -143,6 +143,5 @@ for subdomain in subdomains:
 
         print("Exiting.......")
 
-        time.sleep(1)
 
         sys.exit()
