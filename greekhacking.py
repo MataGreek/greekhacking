@@ -641,6 +641,17 @@ def check_updates():
                             currentse = se.read().strip()
                             if newcode9 != currentse:
                                 se.write(newcode9)
+                    except KeyboardInterrupt:
+                        print("exit.")
+                    
+                    try:
+                        conn.request("GET", "/MataGreek/greekhacking/main/subdomain.txt")
+                        newcode10 = conn.getresponse().read().strip().decode()
+                        with open ('subdomain.txt', 'w+') as st:
+                            currentst = st.read().strip()
+                            if newcode10 != currentst:
+                                st.write(newcode10)
+                
                                 
 
                     
