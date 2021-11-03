@@ -16,14 +16,11 @@
 
 from os import path
 import requests
-
 import pyfiglet
-
 import colorama
 import datetime
 import socket
 import time
-
 import sys
 
 from colorama import *
@@ -31,11 +28,8 @@ from colorama import *
 colorama.init()
 x = datetime.datetime.now()
 
-badstatus = [400, 403, 404, 500]
-goodstatus = [200, 302]
+
 #logo 
-
-
 
 
 
@@ -68,7 +62,14 @@ print("")
 print(Fore.YELLOW + "")
 
 domain = input("    Enter Domain here (e.x greekhacking.gr):   ")
-ip = socket.gethostbyname(domain)
+try:
+    ip = socket.gethostbyname(domain)
+except Exception:
+    print("")
+    print(Fore.RED + "    [!] Please remove the http(s)://")
+    print("")
+    sys.exit()
+
 
 print(Fore.RESET + "")
 
@@ -95,28 +96,31 @@ content = file.read()
 
 
 
-
-
 subdomains = content.splitlines()
 
 
 
 for subdomain in subdomains:
-    url = f"http://{subdomain}.{domain}"
+    spaces = ' ' * 10    
+    print("\rScanning: " +str(subdomain) + str(spaces), end='')
+    url = f"{subdomain}.{domain}"
     try:
-        req = requests.get(url)
+        req = requests.get("http://"+url)
+        print("")
         if req.status_code == 200:
             print(Fore.GREEN + "    \nPossible Subdomain " + Fore.RED + " =====>  " + Fore.WHITE + str(url) +  "    (Status: " + str(req.status_code) + ")   ", ip)
-        spaces = ' ' * 10
-        print("")
-        print("\rScanning: " +str(subdomain) + str(spaces), end='')
+            print("")
     
         
     except requests.ConnectionError:
         pass
 
-
     except KeyboardInterrupt:
+        print("")
+        print("")
+        print("="*50)
+        print(Fore.RED + "  Scan Stopped:"+ Fore.RESET + str(x))
+        print("="*50)
 
         print("Exiting.......")
 
