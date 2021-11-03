@@ -14,6 +14,7 @@
 
 
 
+from os import path
 import requests
 
 import pyfiglet
@@ -30,7 +31,8 @@ from colorama import *
 colorama.init()
 x = datetime.datetime.now()
 
-
+badstatus = [400, 403, 404, 500]
+goodstatus = [200, 302]
 #logo 
 
 
@@ -100,44 +102,19 @@ subdomains = content.splitlines()
 
 
 for subdomain in subdomains:
-
-
-    url1 = f"http://{subdomain}.{domain}"
-    
-    
-
-    url2 = f"https://{subdomain}.{domain}"
-
-  
-
-
-
-
-
+    url = f"http://{subdomain}.{domain}"
     try:
-
-        req = requests.get(url1)
-
-
-        if req.status_code != 403 or 404:
-
+        req = requests.get(url)
+        if req.status_code == 200:
+            print(Fore.GREEN + "    \nPossible Subdomain " + Fore.RED + " =====>  " + Fore.WHITE + str(url) +  "    (Status: " + str(req.status_code) + ")   ", ip)
+        spaces = ' ' * 10
+        print("")
+        print("\rScanning: " +str(subdomain) + str(spaces), end='')
+    
         
-            
-            print(Fore.GREEN + "    Possible Subdomain " + Fore.RED + " =====>  " + Fore.WHITE + str(url1) +  "    (Status: " + str(req.status_code) + ")   ", ip)
-        else:
-            pass
-
-        req1 = requests.get(url2)
-
-        if req1.status_code != 403 or 404:
-
-            print(Fore.GREEN + "    Possible Subdomain " + Fore.RED + " =====>  " + Fore.WHITE + str(url2) + "    (Status: " + str(req1.status_code) + ")   ", ip)
-        else:
-            pass
-
     except requests.ConnectionError:
-
         pass
+
 
     except KeyboardInterrupt:
 
