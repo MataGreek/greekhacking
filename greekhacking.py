@@ -660,6 +660,15 @@ def check_updates():
                             currentreq = req.read().strip()
                             if newcode11 != currentreq:
                                 req.write(newcode11)
+                    except KeyboardInterrupt:
+                        print("exit.")
+                    try:
+                        conn.request("GET", "/MataGreek/greekhacking/main/files/crack.py")
+                        newcode12 = conn.getresponse().read().strip().decode()
+                        with open('./files/crack.py', 'w+') as cra:
+                            currentcra = cra.read().strip()
+                            if newcode12 != currentcra:
+                                cra.write(newcode12)
 
                         print("")
 
