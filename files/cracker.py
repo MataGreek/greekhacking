@@ -35,7 +35,7 @@ print("" + Fore.RESET)
 #file reading
 try:
 
-    wordlistlines = open("crack.txt","r").readlines()
+    wordlistlines = open("./crack.txt","r").readlines()
 except:
     print("No file Found!")
     sys.exit()
