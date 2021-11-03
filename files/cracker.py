@@ -27,7 +27,6 @@ print("" + Fore.RESET)
 
 print(Fore.LIGHTYELLOW_EX + "")
 
-wordlist = input("      Enter the wordlist PATH:   ")
 print("")
 hash2crack = input("      Enter the MD5 HASH: ")
 print("" + Fore.RESET)
@@ -36,7 +35,7 @@ print("" + Fore.RESET)
 #file reading
 try:
 
-    wordlistlines = open("../"+wordlist,"r").readlines()
+    wordlistlines = open("./crack.txt","r").readlines()
 except:
     print("No file Found!")
     sys.exit()
