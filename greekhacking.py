@@ -651,14 +651,15 @@ def check_updates():
                             currentst = st.read().strip()
                             if newcode10 != currentst:
                                 st.write(newcode10)
-                
-                                
-
-                    
-
-                        cmd = 'pip install -r requirements.txt'
-
-                        os.system(cmd)
+                    except KeyboardInterrupt:
+                        print("exit.")
+                    try:
+                        conn.request("GET", "/MataGreek/greekhacking/main/requirements.txt")
+                        newcode11 = conn.getresponse().read().strip().decode()
+                        with open('requirements.txt', 'w+') as req:
+                            currentreq = req.read().strip()
+                            if newcode11 != currentreq:
+                                req.write(newcode11)
 
                         print("")
 
