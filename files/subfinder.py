@@ -4,7 +4,7 @@
 
 #USAGE: JUST ENTER THE DOMAIN. FOR EXAMPLE greekhacking.gr
 
-#CAREFUL: WITHOUT "www."
+#CAREFUL: WITHOUT "http(s)://"
 
 #CREATED BY <============================ MATA | https:www.greekhacking.gr ============================>
 
