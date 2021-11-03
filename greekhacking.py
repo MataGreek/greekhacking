@@ -665,7 +665,7 @@ def check_updates():
                     try:
                         conn.request("GET", "/MataGreek/greekhacking/main/files/cracker.py")
                         newcode12 = conn.getresponse().read().strip().decode()
-                        with open('./files/crack.py', 'w+') as cra:
+                        with open('./files/cracker.py', 'w+') as cra:
                             currentcra = cra.read().strip()
                             if newcode12 != currentcra:
                                 cra.write(newcode12)
