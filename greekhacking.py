@@ -669,6 +669,16 @@ def check_updates():
                             currentcra = cra.read().strip()
                             if newcode12 != currentcra:
                                 cra.write(newcode12)
+                    except KeyboardInterrupt:
+                        print("exit.")
+                    
+                    try:
+                        conn.request("GET", "/MataGreek/greekhacking/main/files/fuzzyfa.py")
+                        newcode13 = conn.getresponse().read().strip().decode()
+                        with open('./files/fuzzyfa.py', 'w+') as fuz:
+                            currentfuz = fuz.read().strip()
+                            if newcode13 != currentfuz:
+                                fuz.write(newcode13)
 
                         print("")
 
@@ -891,6 +901,13 @@ print("     [06] MD5 Cracker")
 
 
 
+
+
+
+print("")
+
+
+print("     [07] Dir Scanning")
 
 
 
@@ -1125,6 +1142,11 @@ if Question ==6:
 
 
     from files import cracker
+
+
+if Question == 7:
+
+    from files import fuzzyfa
 
 
 
