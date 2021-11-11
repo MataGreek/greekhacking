@@ -404,6 +404,20 @@ def check_updates():
 
 
 
+            print("=" * 70)
+
+
+
+            print(Fore.LIGHTBLUE_EX + " [*] Your Version: ",currentVersion + Fore.RESET)
+
+
+
+            print(Fore.GREEN + "=" * 70)
+
+
+
+            print("")
+
 
 
         if repoVersion == currentVersion:
@@ -903,6 +917,12 @@ print("")
 
 
 
+print("     [07] Dir Scanning")
+
+
+print("")
+
+
 
 
 
@@ -1132,6 +1152,10 @@ if Question ==6:
 
 
     from files import cracker
+
+
+if Question == 7:
+    from files import fuzzyfa
 
 
 
