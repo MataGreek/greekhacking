@@ -404,19 +404,6 @@ def check_updates():
 
 
 
-            print("=" * 70)
-
-
-
-            print(Fore.LIGHTBLUE_EX + " [*] Your Version: ",currentVersion + Fore.RESET)
-
-
-
-            print(Fore.GREEN + "=" * 70)
-
-
-
-            print("")
 
 
 
