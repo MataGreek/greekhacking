@@ -1346,7 +1346,7 @@ def check_updates():
 
                         with open('fuzz.txt', 'w+') as fuztxt:
 
-                            currentfuztxt = fuz.read().strip()
+                            currentfuztxt = fuztxt.read().strip()
 
                             if newcode14 != currentfuztxt:
 
