@@ -742,24 +742,6 @@ def check_updates():
 
 
 
-        print("=" * 70)
-
-
-
-
-
-
-
-        print(Fore.LIGHTBLUE_EX + " [!] Latest Version:",repoVersion + Fore.GREEN)
-
-
-
-
-
-
-
-        print("=" * 70)
-
 
 
 
