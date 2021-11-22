@@ -784,8 +784,6 @@ def check_updates():
 
 
 
-            print("")
-
 
 
 
@@ -799,22 +797,6 @@ def check_updates():
 
 
         if repoVersion == currentVersion:
-
-
-
-
-
-
-
-            print("")
-
-
-
-
-
-
-
-            print("=" * 70)
 
 
 
