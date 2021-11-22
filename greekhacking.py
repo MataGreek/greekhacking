@@ -302,7 +302,7 @@
 
 
 
-import pyfiglet
+
 
 
 
@@ -547,30 +547,6 @@ print(Fore.GREEN + "")
 
 
 
-
-
-
-
-
-
-
-logo = pyfiglet.figlet_format("GREEK HACKING")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-print(logo)
 
 
 
@@ -1492,6 +1468,40 @@ def check_updates():
     print("""| |  _| |_) |  _| |  _| | ' /  | |_| | / _ \| |   | ' / | ||  \| | |  _ """)
     print("""| |_| |  _ <| |___| |___| . \  |  _  |/ ___ \ |___| . \ | || |\  | |_| |""")
     print(""" \____|_| \_\_____|_____|_|\_\  |_| |_/_/   \_\____|_|\_\___|_|\_|\____| """)
+
+    print("#" * 100)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    print("                                 Author: MATA    |   https://www.greekhacking.gr/")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    print("#" * 100)
 
 
 check_updates()
