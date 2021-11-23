@@ -807,7 +807,7 @@ def check_updates():
 
 
 
-                ask = input("  [+] An update has been found! Do you want to update? [Y/n]:   ")
+                ask = input("  [+] v"+str(repoVersion)+" Is available. Do you want  to update? [Y/n]:   ")
 
 
 
@@ -1296,16 +1296,8 @@ def check_updates():
                     
 
 
-
-                        print("")
-
-
-
-                        print(Fore.RED + " [!] PLEASE REOPEN THE PROGRAM FOR THE UPDATES TAKE AFFECT!" + Fore.GREEN)
-
-
-
-                        print("")
+                        os.sys("cls||clear")
+                        import greekhacking
 
 
 
