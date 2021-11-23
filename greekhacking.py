@@ -807,7 +807,7 @@ def check_updates():
 
 
 
-                ask = input("  [+] Version "+str(repoVersion)+" Is available. Do you want  to update? [Y/n]:   ")
+                ask = input("  [+] An update has been found! Do you want to update? [Y/n]:   ")
 
 
 
