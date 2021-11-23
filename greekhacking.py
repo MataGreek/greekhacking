@@ -1295,9 +1295,9 @@ def check_updates():
 
                     
 
-
-                        os.sys("cls||clear")
-                        import greekhacking
+                        print("")
+                        print(Fore.RED+" REOPEN THE PROGRAM FOR UPDATES TAKE AFFECT"+Fore.RESET)
+                        print("")
 
 
 
