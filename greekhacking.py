@@ -1509,239 +1509,29 @@ print("")
 
 
 
-print("")
 
 
 
 
+print("""
 
 
 
+[01] Subdomain Finder                               
 
+[02] Admin Login Finder
 
+[03] Port Scanner
 
+[04] Password Generator
 
+[05] Proxy List
 
+[06] MD5 Cracker
 
+[07] Dir Scanning
 
-
-print("     [01] Subdomain Finder")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-print("")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-print("     [02] Admin Login Finder")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-print("")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-print("     [03] Port Scanner")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-print("")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-print("     [04] Password Generator")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-print("")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-print("     [05] Proxy List")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-print("")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-print("     [06] MD5 Cracker")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-print("")
-
-
-
-
-
-
-
-print("     [07] Dir Scanning")
-
-
-
-
-
-print("")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-print("     [0] Exit.")
+[0] Exit.""")
 
 
 
